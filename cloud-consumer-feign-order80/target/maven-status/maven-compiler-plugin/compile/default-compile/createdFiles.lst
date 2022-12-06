@@ -1,0 +1,3 @@
+com\guoba\springcloud\controller\OrderFeignController.class
+com\guoba\springcloud\OrderFeignMain80.class
+com\guoba\springcloud\service\PaymentFeignService.class

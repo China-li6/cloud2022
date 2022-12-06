@@ -1,0 +1,6 @@
+com\guoba\myrole\MySelfRule.class
+com\guoba\springcloud\lb\LoadBalancer.class
+com\guoba\springcloud\config\ApplicationContextConfig.class
+com\guoba\springcloud\controller\OrderController.class
+com\guoba\springcloud\lb\MyLB.class
+com\guoba\springcloud\ConsumerApplication.class

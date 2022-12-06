@@ -1,0 +1,45 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+      config:
+        server:
+          git:
+            uri: git@github.com:zzyybs/springcloud-config.git #GitHub上面的git仓库名字
+            ####搜索目录
+            search-paths:
+              - springcloud-config
+            ####读取分支
+        label: master
+#          git:
+#            uri: https://gitee.com/guoba6/springcloud-config.git  # 连接到gitee远程配置
+#            skipSslValidation: true  #支持https
+#            username: guoba6
+#            password: lx16693732551
+#            search-paths:
+#              - springcloud-config
+#                label: master
+
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+
+#rabbitmq相关配置
+#rabbitmq:
+#  host: localhost
+#  port: 15672
+#  username: guest
+#  password: guest
+
+##rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
